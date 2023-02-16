@@ -1,0 +1,97 @@
+/** 1. CSS RESETS **/
+
+/* 1. Reset margin/padding + Border-Box Model */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Améliorer le rendu du texte */
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Améliorer les média par défaut car (img = par défaut inline) => Responsive */
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 4. Supprimer le style de typo de base */
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 5. Eviter l'overflow des textes même avec des petites viewport */
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/** 2. CSS VARIABLES **/
+
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    /* Font-Family */
+    --ff-outfit: "Outfit", sans-serif;
+    /* Font-Weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/** 3. GENERAL **/
+
+body {
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-bold);
+    background-color: var(--light-gray);
+    font-size: 0.875rem; /* 14px */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** CARD STYLING **/
+
+.card {
+    max-width: 20rem;
+    padding: 1.4rem;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__image {
+    object-fit: cover;
+    margin: auto;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__info {
+    font-size: 1rem;
+    color: var(--grayish-blue);
+    font-weight: var(--fw-regular);
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+}
