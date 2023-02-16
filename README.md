@@ -7,3 +7,4 @@ Utilisation de :
 - Variables
 - Reset CSS
 - Notation BEM pour les class
+- Semantique HTML (plutôt que des div)
