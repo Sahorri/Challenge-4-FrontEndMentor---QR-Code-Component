@@ -6,3 +6,4 @@ Utilisation de :
 -FlexBox
 -Variables
 -Reset CSS
+-Notation BEM pour les class
